@@ -41,13 +41,13 @@ def takeCommand():
         audio = r.listen(source)
 
         try:
-            statement = r.recognize_google(audio, language='en-in')
-            print(f"user said:{statement}\n")
+            tempStatement = r.recognize_google(audio, language='en-US')
+            print(f"user said:{tempStatement}\n")
 
         except Exception as e:
             speak("Pardon me, please say that again")
             return "None"
-        return statement
+        return tempStatement
 
 
 speak("Loading your AI personal assistant E Forty One")
@@ -62,8 +62,8 @@ if __name__ == '__main__':
             continue
 
         if "good bye" in statement or "ok bye" in statement or "stop" in statement:
-            speak('your personal assistant G-one is shutting down,Good bye')
-            print('your personal assistant G-one is shutting down,Good bye')
+            speak('your personal assistant E Forty One is shutting down, Good bye')
+            print('your personal assistant E Forty One is shutting down, Good bye')
             break
 
         if 'wikipedia' in statement:
@@ -124,10 +124,10 @@ if __name__ == '__main__':
             speak(f"the time is {strTime}")
 
         elif 'who are you' in statement or 'what can you do' in statement:
-            speak('I am G-one version 1 point O your personal assistant. I am programmed to minor tasks like'
-                  'opening youtube,google chrome,gmail and stackoverflow ,predict time,take a photo,search wikipedia,'
-                  'predict weather '
-                  'in different cities , get top headline news from times of india and you can ask me computational '
+            speak('I am E Forty One version 1 point O your personal assistant. I am programmed to minor tasks like'
+                  'opening youtube, google chrome, gmail, and stackoverflow, or predict time, take a photo, '
+                  'search wikipedia, predict the weather '
+                  'in different cities, get top headline news from the New York Times and you can ask me computational '
                   'or geographical questions too!')
 
         elif "who made you" in statement or "who created you" in statement or "who discovered you" in statement:
@@ -139,8 +139,8 @@ if __name__ == '__main__':
             speak("Here is stackoverflow")
 
         elif 'news' in statement:
-            news = webbrowser.open_new_tab("https://timesofindia.indiatimes.com/home/headlines")
-            speak('Here are some headlines from the Times of India,Happy reading')
+            news = webbrowser.open_new_tab("https://www.nytimes.com/")
+            speak('Here are some headlines from the New York Times, Happy reading')
             time.sleep(6)
 
         elif "camera" in statement or "take a photo" in statement:
