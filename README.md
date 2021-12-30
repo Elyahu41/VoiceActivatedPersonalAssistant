@@ -1,4 +1,4 @@
-# voiceActivatedPersonalAssistant
+# Voice Activated Personal Assistant
 
 A project to build an AI voice assistant using Python. The Voice assistant interacts with humans to perform basic tasks.
 
